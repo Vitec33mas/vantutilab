@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Калькулятор ROI</title>
+<meta name="description" content="Калькулятор ROI показывающий следующие параметры: CTR, CPM, CPC, CTC, CPA, CPS, CPM, CTB, CPS, APV, APC"/>
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<style>
+.branding h1{color:#1f1f1f;}
+.branding .site-title{font-family:Scada,sans-serif;font-weight:400;font-style:normal;}
+#background-image{background-size:cover;}
+.widget-title{font-size:20px;}
+body{font-size:17px;}
+@media screen and (min-width:992px){
+html{font-size:17px;}
+.bb-post-single .s-post-title{font-size:35px;}
+}
+body, html,
+section.error-404 .text, .inline-popup .title, .authentication .title, .bb-other-posts .title, .bb-post-share-box h2, .bb-page-header h1{font-family:Scada,sans-serif
+}
+</style>
+</head>
+<body>
+<main id="main" role="main">
+<div class="container main-container">
+<h1 class="mf-hide site-title">Калькулятор ROI</h1>
+<style>.post-thumbnail{display:none}
+.calc_input, .calc_btn,  .calc_result{margin-bottom:20px;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;}
+.calc_input_item, .calc_btn_item,  .calc_result_item{margin-bottom:10px;}
+.calc_input_item{margin-bottom:10px;}
+.calc_result_item{margin-bottom:30px;}
+.calc_input_item:last-child, .calc_btn_item:last-child{}
+.calc_input_item label{color:#1f1f1f;}
+.calc_input_item input{display:block !important;width:100%;height:35px;padding:.428571rem 1rem !important;font-size:1rem;font-weight:400;line-height:1.428572;color:#1f1f1f !important;background-color:#fff !important;background-clip:padding-box;border:1px solid #d4dae3 !important;border-radius:.25rem !important;transition:border-color ease-in-out .15s;box-sizing:border-box !important;}
+.calc_input_item input:hover, .calc_input_item input:active{border-color:#4e8eb3!important;}
+.calc_input_item input::-webkit-outer-spin-button, .calc_input_item input::-webkit-inner-spin-button{-webkit-appearance:none;}
+.calc_btn_item:first-child{text-align:right;}
+.calc_btn_item button{min-width:auto;color:#fff;width:100%;line-height:36px;display:inline-block;height:36px;padding:0;vertical-align:middle;text-transform:uppercase;letter-spacing:.5px;border:none;border-radius:4px;-webkit-box-shadow:0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);box-shadow:0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);box-sizing:border-box !important;}
+.calc_btn_item button:hover{-webkit-box-shadow:0 3px 3px 0 rgba(0, 0, 0, .14), 0 1px 7px 0 rgba(0, 0, 0, .12), 0 3px 1px -1px rgba(0, 0, 0, .2);box-shadow:0 3px 3px 0 rgba(0, 0, 0, .14), 0 1px 7px 0 rgba(0, 0, 0, .12), 0 3px 1px -1px rgba(0, 0, 0, .2);}
+.waves-effect{position:relative;z-index:1;display:inline-block;overflow:hidden;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-transition:.3s ease-out;-moz-transition:.3s ease-out;-o-transition:.3s ease-out;transition:.3s ease-out;vertical-align:middle;-webkit-tap-highlight-color:transparent;}
+.calc_result_item .overlay{overflow:hidden;height:100px;display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;position:relative;-webkit-transition:-webkit-box-shadow .25s;-moz-transition:box-shadow .25s;-o-transition:box-shadow .25s;transition:-webkit-box-shadow .25s;transition:box-shadow .25s;transition:box-shadow .25s, -webkit-box-shadow .25s;border-radius:2px;background-color:#fff;padding:15px;color:#fff;box-sizing:border-box !important;}
+.calc_result_item .label{width:60px;height:60px;margin:5px;text-align:center;background-color:rgba(0, 0, 0, .18);border-radius:50%;font-size:20px;font-weight:400;display:flex;align-items:center;justify-content:center;}
+.calc_result_item .label span{line-height:38px;height:40px;width:100%;}
+.calc_result_item .description{font-weight:300;flex:1 0 auto;text-align:right;}
+.calc_result_item .title, .calc_result_item .value{}
+.calc_result_item .title{font-size:14px;}
+.calc_result_item .value{font-size:1.64rem;}
+.gradient-45deg-light-blue-cyan{background:#0288d1;background:-webkit-linear-gradient(45deg, #0288d1, #26c6da) !important;background:-moz- oldlinear-gradient(45deg, #0288d1, #26c6da) !important;background:-o-linear-gradient(45deg, #0288d1, #26c6da) !important;background:linear-gradient(45deg, #0288d1, #26c6da) !important;}
+.gradient-45deg-light-blue-cyan.gradient-shadow{-webkit-box-shadow:0 6px 20px 0 rgba(38, 198, 218, .5) !important;box-shadow:0 6px 20px 0 rgba(38, 198, 218, .5) !important;}
+.gradient-45deg-red-pink{background:#ff5252;background:-webkit-linear-gradient(45deg, #ff5252, #f48fb1) !important;background:-moz- oldlinear-gradient(45deg, #ff5252, #f48fb1) !important;background:-o-linear-gradient(45deg, #ff5252, #f48fb1) !important;background:linear-gradient(45deg, #ff5252, #f48fb1) !important;}
+.gradient-45deg-red-pink.gradient-shadow{-webkit-box-shadow:0 6px 20px 0 rgba(244, 143, 177, .5) !important;box-shadow:0 6px 20px 0 rgba(244, 143, 177, .5) !important;}
+.gradient-45deg-semi-dark{background:#00aeff;background:-webkit-gradient(linear, right top, left top, from(#00aeff), to(#3369e6)) !important;background:-webkit-linear-gradient(right, #00aeff, #3369e6) !important;background:-moz- oldlinear-gradient(right, #00aeff, #3369e6) !important;background:-o-linear-gradient(right, #00aeff, #3369e6) !important;background:linear-gradient(-90deg, #00aeff, #3369e6) !important;}
+.gradient-45deg-semi-dark.gradient-shadow{-webkit-box-shadow:0 6px 20px 0 rgba(51, 105, 230, .5) !important;box-shadow:0 6px 20px 0 rgba(51, 105, 230, .5) !important;}
+.gradient-45deg-purple-light-blue{background:#e040fb;background:-webkit-linear-gradient(45deg, #e040fb, #4fc3f7) !important;background:-moz- oldlinear-gradient(45deg, #e040fb, #4fc3f7) !important;background:-o-linear-gradient(45deg, #e040fb, #4fc3f7) !important;background:linear-gradient(45deg, #e040fb, #4fc3f7) !important;}
+.gradient-45deg-purple-light-blue.gradient-shadow{-webkit-box-shadow:0 6px 20px 0 rgba(79, 195, 247, .5) !important;box-shadow:0 6px 20px 0 rgba(79, 195, 247, .5) !important;}
+.gradient-45deg-deep-orange-orange{background:#bf360c;background:-webkit-linear-gradient(45deg, #bf360c, #f57c00) !important;background:-moz- oldlinear-gradient(45deg, #bf360c, #f57c00) !important;background:-o-linear-gradient(45deg, #bf360c, #f57c00) !important;background:linear-gradient(45deg, #bf360c, #f57c00) !important;}
+.gradient-45deg-deep-orange-orange.gradient-shadow{-webkit-box-shadow:0 6px 20px 0 rgba(245, 124, 0, .5) !important;box-shadow:0 6px 20px 0 rgba(245, 124, 0, .5) !important;}
+@media(max-width:559px){  	.calc_result_item.col-xs-6{width:100%;}
+}    @media(min-width:1768px){  	.calc_btn_item button{min-width:180px;width:auto;}
+}</style>
+<div class="row calc_input">
+	<div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+		<label for="c_deposit">Расход:</label> <input type="number" min="0" step="0.01" class="form-control input-lg" name="c_deposit" id="c_deposit" value="" placeholder="" required></div><div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+		<label for="c_profit">Доход:</label> <input type="number" min="0" step="0.01" class="form-control input-lg" name="c_profit" id="c_profit" value="" placeholder="" required></div><div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+<!--	<label for="c_views">Просмотры</label> <input type="number" min="0" step="1" class="form-control input-lg" name="c_views" id="c_views" value="" placeholder=""></div><div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+		<label for="c_clicks">Клики</label> <input type="number" min="0" step="1" class="form-control input-lg" name="c_clicks" id="c_clicks" value="" placeholder=""></div><div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+		<label for="c_leads">Заявки</label> <input type="number" min="0" step="1" class="form-control input-lg" name="c_leads" id="c_leads" value="" placeholder=""></div><div class="calc_input_item col-lg-2 col-sm-6 col-xs-6">
+		<label for="c_approved_leads">Продажи</label> <input type="number" min="0" step="1" class="form-control input-lg" name="c_approved_leads" id="c_approved_leads" value="" placeholder=""></div></div><div class="row calc_btn">
+-->
+	<div class="row calc_result">  <div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-deep-orange-orange gradient-shadow">  <div class="label">ROI</div><div class="description">  <div class="value"> <span id="r_roi">0</span> <span>%</span></div><div class="title">Окупаемость</div></div></div></div>
+
+<center>
+	<div class="calc_btn_item col-lg-6 col-sm-6 col-xs-6">
+		<button class="c_calculate waves-effect gradient-45deg-light-blue-cyan" id="c_calculate">Рассчитать</button></div>
+	<div class="calc_btn_item col-lg-6 col-sm-6 col-xs-6">
+		<button class="c_reset waves-effect gradient-45deg-red-pink" id="c_reset">Сбросить</button></div></div>
+</center>
+<!--	<div class="row calc_result">  <div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-deep-orange-orange gradient-shadow">  <div class="label">ROI</div><div class="description">  <div class="value"> <span id="r_roi">0</span> <span>%</span></div><div class="title">Окупаемость</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-semi-dark gradient-shadow">  <div class="label">CTR</div><div class="description">  <div class="value"> <span id="r_ctr">0</span> <span>%</span></div><div class="title">Показы в клики</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-semi-dark gradient-shadow">  <div class="label">CTC</div><div class="description">  <div class="value"> <span id="r_ctc">0</span> <span>%</span></div><div class="title">Клики в действия</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-semi-dark gradient-shadow">  <div class="label">CTB</div><div class="description">  <div class="value"> <span id="r_ctb">0</span> <span>%</span></div><div class="title">Действия в покупки</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-light-blue-cyan gradient-shadow">  <div class="label">CPM</div><div class="description">  <div class="value"> <span id="r_cpm">0</span> <span>$</span></div><div class="title">Цена 1000 показов</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-light-blue-cyan gradient-shadow">  <div class="label">CPC</div><div class="description">  <div class="value"> <span id="r_cpc">0</span> <span>$</span></div><div class="title">Цена клика</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-light-blue-cyan gradient-shadow">  <div class="label">CPA</div><div class="description">  <div class="value"> <span id="r_cpa">0</span> <span>$</span></div><div class="title">Цена действия</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-light-blue-cyan gradient-shadow">  <div class="label">CPS</div><div class="description">  <div class="value"> <span id="r_cps">0</span> <span>$</span></div><div class="title">Цена продажи</div></div></div></div><div class="calc_result_item col-lg-offset-3 col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-purple-light-blue gradient-shadow">  <div class="label">APV</div><div class="description">  <div class="value"> <span id="r_apv">0</span> <span>$</span></div><div class="title">Средний чек покупки</div></div></div></div><div class="calc_result_item col-lg-3 col-sm-6 col-xs-6">  <div class="overlay gradient-45deg-purple-light-blue gradient-shadow">  <div class="label">APC</div><div class="description">  <div class="value"> <span id="r_apc">0</span> <span>$</span></div><div class="title">Средний чек визита</div></div></div></div></div></div></div></article></div></div></div></div></div></div><div id="sticky-border"></div></main> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>$(document).ready(function(){
+symbol_percent='%';
+symbol_currency='$'
+items=[
+{'name':'roi','result':'','symbol':' '+symbol_percent},
+{'name':'ctr','result':'','symbol':' '+symbol_percent},
+{'name':'ctc','result':'','symbol':' '+symbol_percent},
+{'name':'ctb','result':'','symbol':' '+symbol_percent},
+{'name':'cpm','result':'','symbol':' '+symbol_currency},
+{'name':'cpc','result':'','symbol':' '+symbol_currency},
+{'name':'cpa','result':'','symbol':' '+symbol_currency},
+{'name':'cps','result':'','symbol':' '+symbol_currency},
+{'name':'apv','result':'','symbol':' '+symbol_currency},
+{'name':'apc','result':'','symbol':' '+symbol_currency},
+];
+items_inputs=[
+{'name':'c_deposit','value': 0},
+{'name':'c_profit','value': 0},
+{'name':'c_views','value': 0},
+{'name':'c_clicks','value': 0},
+{'name':'c_leads','value': 0},
+{'name':'c_approved_leads','value': 0}
+];
+function c_calculate(){
+items_inputs.forEach(function(item){
+this[item['name']]=$('input[name="'+item['name']+'"]').val();
+if(this[item['name']] < 0){
+this[item['name']]=0;
+$('input[name="'+item['name']+'"]').val(0);
+}});
+roi=+((c_profit - c_deposit) / c_deposit * 100).toFixed(2);
+ctr=+(c_clicks / c_views * 100).toFixed(2);
+ctc=+(c_leads / c_clicks * 100).toFixed(2);
+ctb=+(c_approved_leads / c_leads * 100).toFixed(2);
+cpm=+(c_deposit / c_views * 1000).toFixed(1);
+cpc=+(c_deposit / c_clicks).toFixed(1);
+cpa=+(c_deposit / c_leads).toFixed(1);
+cps=+(c_deposit / c_approved_leads).toFixed(1);
+apv=+(c_profit / c_approved_leads).toFixed(1);
+apc=+(c_profit / c_clicks).toFixed(1);
+items.forEach(function(item){
+item['result']=eval(item['name']);
+if(item['name']!='roi'){
+$('#r_'+item['name']).text(item['result'] <=0 ? '-': !isFinite(item['result']) ? '-': item['result']);
+$('#r_'+item['name']).next().text(item['result'] <=0 ? '-': !isFinite(item['result']) ? '-': item['symbol']);
+}else{
+$('#r_'+item['name']).text(!isFinite(item['result']) ? '-': item['result']);
+$('#r_'+item['name']).next().text(!isFinite(item['result']) ? '-': item['symbol']);
+}});
+}
+function c_reset(){
+items.forEach(function(item){
+$('#r_'+item['name']).text('0');
+$('#r_'+item['name']).next().text(item['symbol']);
+});
+items_inputs.forEach(function(item){
+this[item['name']]=$('input[name="'+item['name']+'"]').val('');
+});
+}
+$('#c_calculate').click(function(){
+c_calculate();
+});
+$('.calc_input_item input').keyup(function(event){
+if(event.keyCode==13){
+c_calculate();
+}});
+$('#c_reset').click(function(){
+c_reset();
+});
+});</script>
+</body>
+</html>
