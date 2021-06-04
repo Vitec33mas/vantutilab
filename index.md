@@ -1,3 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Как вырастить лук дома – 2 пошаговые инструкции</title>
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Как вырастить лук дома – 2 пошаговые инструкции" />
+<meta property="og:description" content="Выращиваем лук на перо в домашних условиях на подоконнике в воде или в грунте с помощью 2 пошаговых инструкций, советами и примечаниями по выращиванию зелени из севка и порея." />
+<meta property="og:url" content="https://gardenerinfo.github.io/articles/index.html" />
+  
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/gardenerinfo/viewtopic/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
